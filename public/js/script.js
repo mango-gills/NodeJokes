@@ -2,19 +2,13 @@ const submitBtn = document.querySelector(".submit-btn");
 const jokeText = document.getElementById("joke");
 const answer = document.getElementById("answer");
 
-handleClick();
-
+// get a random joke on submit button click
 submitBtn.addEventListener("click", () => {
   handleClick();
 });
 
-const randomJoke = () => {
-  return Math.floor(Math.random() * 1000) + 1;
-};
-
-console.log("working for now");
-
-async function fetchJoke() {
+// get json data from api endpoint
+const fetchJoke = async () => {
   try {
     const response = await fetch("https://icanhazdadjoke.com", {
       headers: {
@@ -23,14 +17,17 @@ async function fetchJoke() {
     });
 
     const data = response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-async function handleClick() {
+// get the joke text from json data
+const handleClick = async () => {
   const { joke } = await fetchJoke();
   jokeText.innerText = joke;
-}
+};
+
+// set a joke on jokeText on page load.
+handleClick();

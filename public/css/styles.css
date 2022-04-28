@@ -21,8 +21,8 @@ body {
 
 .container {
   position: relative;
-  width: 562px;
-  height: 492px;
+  width: 662px;
+  height: 542px;
   background: #0194d7;
   border-radius: 5px;
   overflow: hidden;
@@ -31,25 +31,25 @@ body {
 
 .heading {
   background: #fff;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  height: 66px;
+  margin-top: 28px;
+  margin-bottom: 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 2px;
 }
 
 .heading h1 {
   font-style: normal;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 60px;
 }
 
 .jokes-container {
-  height: 270px;
+  height: 320px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   overflow-y: scroll;
 }
 
@@ -57,10 +57,10 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 3rem;
-  width: 455px;
-  margin: 10px auto;
+  width: 555px;
+  /* margin: 10px auto; */
   color: darkred;
-  padding: 5px 0;
+  /* padding: 5px 0; */
 }
 
 .submit-btn {
